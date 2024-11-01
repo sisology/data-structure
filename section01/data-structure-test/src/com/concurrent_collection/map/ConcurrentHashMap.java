@@ -11,13 +11,13 @@ public class ConcurrentHashMap {
     /**
      * 스레드 개수는 4개,
      * 그리고 각 스레드는 1,000,000번씩의
-     * put(), computeIfPresent(), get() 작업을 수행하도록 설정되어 있습니다.
+     * put(), computeIfPresent(), get() 작업을 수행하도록 설정
 
      * 총 작업 수 = 스레드 수 X 각 스레드의 작업 수
      * 총 작업 수 = 4,000,000
 
      * ConcurrentHashMap과 HashMap을 비교하여,
-     * 동시성 문제를 방지하는 ConcurrentHashMap의 장점을 테스트합니다.
+     * 동시성 문제를 방지하는 ConcurrentHashMap의 장점을 테스트
      */
 
     private static final int NUM_THREADS = 4;
@@ -76,10 +76,17 @@ public class ConcurrentHashMap {
 
     /**
      * 테스트 요약 및 의도
-     * ConcurrentHashMap의 장점: 동시성을 보장하면서 여러 스레드가 동시에 데이터를 삽입, 수정, 검색하는 상황에서도 충돌 없이 안전하게 작동합니다.
-     * ConcurrentHashMap 사용 시 결과: 여러 스레드가 동시에 데이터를 삽입하거나 수정해도 데이터가 안전하게 처리되며, 최종적으로 일관된 상태를 유지합니다.
-     * HashMap 사용 시 결과: 멀티스레드 환경에서 데이터 경합으로 인해 데이터 손실, 충돌, 비일관적인 상태가 발생할 수 있습니다.
-     * 따라서 이 테스트의 의도는 멀티스레드 환경에서 안전하게 데이터를 처리할 수 있는 방법을 보여주기 위한 것이며, ConcurrentHashMap은 이러한 문제를 해결하는 적합한 데이터 구조임을 입증합니다.
+     * ConcurrentHashMap의 장점
+     * 동시성을 보장하면서 여러 스레드가 동시에 데이터를 삽입, 수정, 검색하는 상황에서도 충돌 없이 안전하게 작동
+
+     * ConcurrentHashMap 사용 시 결과
+     * 여러 스레드가 동시에 데이터를 삽입하거나 수정해도 데이터가 안전하게 처리되며, 최종적으로 일관된 상태를 유지
+
+     * HashMap 사용 시 결과
+     * 멀티스레드 환경에서 데이터 경합으로 인해 데이터 손실, 충돌, 비일관적인 상태가 발생할 수 있음
+
+     * 따라서 이 테스트의 의도는 멀티스레드 환경에서 안전하게 데이터를 처리할 수 있는 방법을 보여주기 위한 것이며,
+     * ConcurrentHashMap은 이러한 문제를 해결하는 적합한 데이터 구조임을 입증
      */
 
 }
